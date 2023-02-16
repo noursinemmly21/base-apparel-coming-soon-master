@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+:root{
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+    /* 
+    - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+    - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+    */
+}
+.cards{
+    border: 1px solid var(--Desaturated-Red);
+    margin-top: 30px;
+    background: linear-gradient(135deg,hsl(0, 100%, 98%) ,hsl(0, 0%, 100%) );
+    border-radius: 10px;
+}
+.cards .text,.logo{
+    padding: 51px 0 0 58px;
+}
+.cards .text h1{
+color: var(--Dark-Grayish-Red);
+width: 130px;
+font-size: 3.75rem;
+line-height: 0.8;
+
+}
+.cards .text h1 span{
+    color: var(--Desaturated-Red);
+    font-weight: 300;
+}
+.cards .text p{
+    color: var(--Desaturated-Red);
+    text-align-last: center;
+}
+.cards form{
+    position: relative;
+}
+.cards input{
+    border: 1px solid hsl(0, 80%, 86%);
+    border-radius: 14px;
+    width: 69%;
+    height: 47px;
+    
+    padding-left: 17px;
+    font-size: 15px;
+}
+.cards input::placeholder{
+    color: var(--Dark-Grayish-Red);
+}
+.cards input:hover,.cards input:focus{
+outline: none;
+border-color: hsl(0, 74%, 74%);
+border-width: 2px;
+}
+.cards form button{
+    position: absolute;
+    top: 20%;
+    left: 63%;
+    background:var(--Soft-Red) ;
+    border-radius: 8px;
+    padding: 0px 21px;
+    border: none;
+    color: white;
+}
+.cards form button:hover{
+    box-shadow: 0 0 10px hsl(0, 80%, 86%);
+}
+
+.cards .image_work_lg {
+    width: 100%;
+    height: 27rem;
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+@media (min-width:0px)and (max-width:991px){
+    .cards{
+        margin-bottom: 20px;
+    }
+    .cards .image_work_lg {
+        display: none;
+    }
+    .cards .text{
+        padding-left: 15px;
+    }
+    .cards .text .titre{
+            display: flex;
+            justify-content: center;
+            margin-right: 126px;
+            margin-bottom: 20px;
+    }
+    .cards input{
+        margin-bottom: 25px;
+    }
+    .cards form svg{
+            left: 65%;
+            top: 10%;
+    }
+}
+.cards .image_work {
+    width: 100%;
+    margin-top: 43px;
+}
+.cards form .error{
+    color: #f15454;
+    font-size: 18px;
+}
+.cards form .error span{
+    padding-right: 10px;
+}
